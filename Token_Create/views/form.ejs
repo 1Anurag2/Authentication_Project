@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Token Generator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-md-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header card-title">
+              <strong>Create a Csrf Token</strong>
+            </div>
+            <form action="/submit" method="post">
+              <input type="hidden" name="_csrf" value="<%= csrfToken %>"/>
+              <div class="mb-3 col-md-10 mx-auto">
+                <label for="exampleInputname1" class="form-label">Name</label>
+                <input
+                  type="name"
+                  name="name"
+                  class="form-control"
+                  id="exampleInputname1"
+                  aria-describedby="nameHelp"
+                />
+              </div>
+              <div class="mb-3 col-md-10 mx-auto">
+                <button type="submit" class="btn btn-primary">Create</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
